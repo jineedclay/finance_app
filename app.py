@@ -19,14 +19,20 @@ st.set_page_config(
 # 스트림릿 로고 숨기기
 hide_st_style = """
             <style>
-            /* 전체 헤더와 로고 영역 삭제 */
+            /* 1. 상단 헤더와 메뉴 버튼 숨기기 */
             [data-testid="stHeader"] {visibility: hidden; height: 0%;}
-            /* 하단 푸터와 "Made with Streamlit" 삭제 */
+            
+            /* 2. 하단 푸터(Made with Streamlit) 숨기기 */
             footer {visibility: hidden;}
-            /* 오른쪽 하단 관리자용 빨간 버튼 강제 삭제 */
+            
+            /* 3. 오른쪽 하단 빨간색 관리자 버튼(Deploy) 강제 삭제 */
             .stDeployButton {display:none !important;}
-            /* 툴바와 장식 라인 삭제 */
+            
+            /* 4. 상단 장식 라인 삭제 */
             #stDecoration {display:none !important;}
+            
+            /* 5. 앱이 화면에 꽉 차도록 여백 조정 */
+            .block-container {padding-top: 2rem;}
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
