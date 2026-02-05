@@ -62,14 +62,31 @@ questions = [
 
 # st.title("💰 나만의 부자 지수 측정기")
 
-col1, col2 = st.columns([1, 5]) # 왼쪽(아이콘)과 오른쪽(제목) 비율
+col1, col2 = st.columns([1, 6]) # 제목 공간을 조금 더 넓혔습니다
 
 with col1:
-    # 탭 아이콘과 똑같은 이미지를 본문에도 크게 넣습니다
+    # 황금 동전 나무 아이콘
     st.image(icon_image, width=80) 
 
 with col2:
-    st.title("나만의 부자 지수 측정기")
+    # HTML/CSS를 활용한 세련된 제목 디자인
+    st.markdown("""
+        <style>
+        .main-title {
+            font-size: 36px !important;
+            font-weight: 800 !important;
+            color: #333333; /* 진한 가독성 컬러 */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* 미세한 입체감 */
+            letter-spacing: -1.5px;
+            margin-top: 15px; /* 아이콘과 높이 정렬 */
+        }
+        .highlight {
+            color: #FFD700; /* '부자' 단어에만 황금색 포인트! */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        </style>
+        <p class="main-title">나만의 <span class="highlight">부자</span> 지수 측정기</p>
+    """, unsafe_allow_html=True)
 
 if st.session_state.step < len(questions):
     progress = (st.session_state.step + 1) / len(questions)
