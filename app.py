@@ -4,10 +4,14 @@ import plotly.graph_objects as go
 
 # 앱 설정
 import streamlit as st
+from PIL import Image
+
+# 이미지 파일 불러오기
+icon_image = Image.open("main_icon.jpg")
 
 st.set_page_config(
     page_title="나만의 부자 지수 측정기", # 웹 브라우저 탭에 뜨는 이름
-    page_icon="💰", # 아이콘 (이모지나 이미지 주소)
+    page_icon=icon_image 
     layout="centered"
 )
 
