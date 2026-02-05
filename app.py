@@ -19,14 +19,17 @@ st.set_page_config(
 # 로고 숨기기
 hide_st_style = """
             <style>
-            /* 상단 헤더, 메뉴, 푸터 싹 다 강제 삭제 */
+            /* 1. 상단 헤더와 메뉴 버튼 완전히 제거 */
             [data-testid="stHeader"] {display: none !important;}
+            
+            /* 2. 하단 푸터(Made with Streamlit) 제거 */
             footer {display: none !important;}
+            
+            /* 3. 오른쪽 하단 빨간색 Deploy 버튼(범인!) 제거 */
             .stDeployButton {display: none !important;}
+            
+            /* 4. 상단 장식선 제거 */
             [data-testid="stDecoration"] {display: none !important;}
-            #MainMenu {display: none !important;}
-            /* 화면 위쪽 여백 줄이기 */
-            .block-container {padding-top: 1rem !important;}
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
