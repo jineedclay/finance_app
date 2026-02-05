@@ -19,17 +19,14 @@ st.set_page_config(
 # 로고 숨기기
 hide_st_style = """
             <style>
-            /* 1. 상단 헤더와 메뉴 버튼 완전히 제거 */
-            [data-testid="stHeader"] {display: none !important;}
-            
-            /* 2. 하단 푸터(Made with Streamlit) 제거 */
-            footer {display: none !important;}
-            
-            /* 3. 오른쪽 하단 빨간색 Deploy 버튼(범인!) 제거 */
+            /* 최종 업데이트: 2026-02-06 */
+            [data-testid="stHeader"] {display: none !important; visibility: hidden !important;}
+            footer {display: none !important; visibility: hidden !important;}
             .stDeployButton {display: none !important;}
-            
-            /* 4. 상단 장식선 제거 */
-            [data-testid="stDecoration"] {display: none !important;}
+            #stDecoration {display: none !important;}
+            #MainMenu {display: none !important;}
+            header {display: none !important;}
+            .block-container {padding-top: 1rem !important;}
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
