@@ -22,6 +22,10 @@ hide_st_style = """
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             header {visibility: hidden;}
+            /* 아래 코드가 오른쪽 하단 빨간 버튼을 지워줍니다 */
+            .stDeployButton {display:none !important;}
+            /* 하단 여백까지 꽉 채우기 */
+            #stDecoration {display:none !important;}
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
