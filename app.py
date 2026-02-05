@@ -9,11 +9,22 @@ from PIL import Image
 # 이미지 파일 불러오기
 icon_image = Image.open("images/main_icon.jpg")
 
+# 앱 설정
 st.set_page_config(
-    page_title="나만의 부자 지수 측정기", # 웹 브라우저 탭에 뜨는 이름
+    page_title="나만의 부자 지수 측정기", # 웹 브라우저 탭(파비콘)에 뜨는 이름
     page_icon=icon_image,
     layout="centered"
 )
+
+스트림릿 로고 숨기기 (쉼표 필요 없음)
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 if 'step' not in st.session_state:
     st.session_state.step = 0
