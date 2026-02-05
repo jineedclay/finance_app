@@ -44,7 +44,16 @@ questions = [
     {"cat": "금융지능", "q": "주변과 비교하기보다 나의 재무 계획에 집중하는가?"}
 ]
 
-st.title("💰 나만의 부자 지수 측정기")
+# st.title("💰 나만의 부자 지수 측정기")
+
+col1, col2 = st.columns([1, 5]) # 왼쪽(아이콘)과 오른쪽(제목) 비율
+
+with col1:
+    # 탭 아이콘과 똑같은 이미지를 본문에도 크게 넣습니다
+    st.image(icon_image, width=80) 
+
+with col2:
+    st.title("나만의 부자 지수 측정기")
 
 if st.session_state.step < len(questions):
     progress = (st.session_state.step + 1) / len(questions)
