@@ -111,12 +111,11 @@ else:
         fig = go.Figure(data=go.Scatterpolar(
             r=cat_scores + [cat_scores[0]],
             theta=categories + [categories[0]],
-            fill='toself'
+            fill='toself',
             # --- 여기서부터 색상 설정 추가 ---
             line=dict(color='#FFD700', width=3), # 선 색상을 황금색(Gold)으로!
             fillcolor='rgba(255, 215, 0, 0.4)',  # 안쪽 채우기 색상을 투명한 황금색으로!
         # ------------------------------
-            
         ))
         fig.update_layout(polar=dict(radialaxis=dict(visible=True, range=[0, 25])), showlegend=False)
         st.plotly_chart(fig, use_container_width=True)
