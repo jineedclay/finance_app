@@ -16,7 +16,7 @@ st.set_page_config(
     layout="centered"
 )
 
-스트림릿 로고 숨기기 (쉼표 필요 없음)
+# 스트림릿 로고 숨기기 (쉼표 필요 없음)
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
