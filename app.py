@@ -11,7 +11,7 @@ icon_image = Image.open("main_icon.jpg")
 
 st.set_page_config(
     page_title="나만의 부자 지수 측정기", # 웹 브라우저 탭에 뜨는 이름
-    page_icon=icon_image 
+    page_icon=icon_image,
     layout="centered"
 )
 
