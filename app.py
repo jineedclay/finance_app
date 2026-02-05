@@ -16,15 +16,16 @@ st.set_page_config(
     layout="centered"
 )
 
-# 스트림릿 로고 숨기기 (쉼표 필요 없음)
+# 스트림릿 로고 숨기기
 hide_st_style = """
             <style>
-            #MainMenu {visibility: hidden;}
+            /* 전체 헤더와 로고 영역 삭제 */
+            [data-testid="stHeader"] {visibility: hidden; height: 0%;}
+            /* 하단 푸터와 "Made with Streamlit" 삭제 */
             footer {visibility: hidden;}
-            header {visibility: hidden;}
-            /* 아래 코드가 오른쪽 하단 빨간 버튼을 지워줍니다 */
+            /* 오른쪽 하단 관리자용 빨간 버튼 강제 삭제 */
             .stDeployButton {display:none !important;}
-            /* 하단 여백까지 꽉 채우기 */
+            /* 툴바와 장식 라인 삭제 */
             #stDecoration {display:none !important;}
             </style>
             """
