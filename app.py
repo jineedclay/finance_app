@@ -3,7 +3,13 @@ import pandas as pd
 import plotly.graph_objects as go
 
 # 앱 설정
-st.set_page_config(page_title="나의 재무 건강 검진", layout="centered")
+import streamlit as st
+
+st.set_page_config(
+    page_title="나만의 부자 지수 측정기", # 웹 브라우저 탭에 뜨는 이름
+    page_icon="💰", # 아이콘 (이모지나 이미지 주소)
+    layout="centered"
+)
 
 if 'step' not in st.session_state:
     st.session_state.step = 0
