@@ -81,7 +81,7 @@ with col2:
             margin-top: 15px; /* 아이콘과 높이 정렬 */
         }
         .highlight {
-            color: #FFD700; /* '부자' 단어에만 황금색 포인트! */
+            color: #D4AF37; /* '부자' 단어에만 황금색 포인트! */
             text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
         </style>
